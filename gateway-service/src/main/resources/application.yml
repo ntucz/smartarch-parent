@@ -7,10 +7,10 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: routes-user-service
-          uri: lb://user-service
-          predicates: 
-            - Path=/users/**,/roles/**,opersets/**
+      - id: routes-user-service
+        uri: lb://user-service
+        predicates: 
+        - Path=/users/**,/roles/**,opersets/**
 
 eureka:
   client:

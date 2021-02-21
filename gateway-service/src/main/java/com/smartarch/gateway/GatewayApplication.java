@@ -9,6 +9,10 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class GatewayApplication {
 	
+	public static void main(String[] args) {
+		SpringApplication.run(GatewayApplication.class, args);
+	}
+	
 	@Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
@@ -16,9 +20,5 @@ public class GatewayApplication {
                 .uri("lb://user-service"))
                 .build();
     }
-
-	public static void main(String[] args) {
-		SpringApplication.run(GatewayApplication.class, args);
-	}
 
 }
