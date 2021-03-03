@@ -19,6 +19,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<platform.version>0.0.1-SNAPSHOT</platform.version>
 	</properties>
 
 	<dependencyManagement>
@@ -73,20 +74,9 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<executable>true</executable>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
 	<modules>
 		<module>eureka-service</module>
 		<module>gateway-service</module>
+		<module>smartarch-platform</module>
 	</modules>
 </project>

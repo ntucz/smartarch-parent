@@ -7,7 +7,7 @@
 		<artifactId>smartarch-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.smartarch.gateway</groupId>
+	<groupId>com.smartarch.platform</groupId>
 	<artifactId>gateway-service</artifactId>
 	<packaging>jar</packaging>
 	<dependencies>
