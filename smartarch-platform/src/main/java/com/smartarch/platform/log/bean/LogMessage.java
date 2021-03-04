@@ -17,7 +17,7 @@ import lombok.experimental.Accessors;
 @Data
 @NoArgsConstructor
 @Accessors(chain = true)
-@Document(indexName = "${esConfig.getLogIndexName()}", shards = 3, replicas = 1)
+@Document(indexName = "#{@esConfig.getLogIndexName()}", shards = 3, replicas = 1)
 public class LogMessage {
 
     @Id
