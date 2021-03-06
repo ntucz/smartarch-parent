@@ -8,7 +8,7 @@ import org.springframework.data.elasticsearch.core.IndexOperations;
 import org.springframework.stereotype.Service;
 
 import com.smartarch.platform.log.bean.LogMessage;
-import com.smartarch.platform.log.dao.ElasticRepository;
+import com.smartarch.platform.log.dao.LogRepository;
 
 @Service
 public class ElasticService {
@@ -17,7 +17,7 @@ public class ElasticService {
     private ElasticsearchRestTemplate esTemplate;
     
     @Autowired
-    private ElasticRepository elasticRepository;
+    private LogRepository logRepository;
 
     public Boolean createIndex() {
 		/*
@@ -46,7 +46,7 @@ public class ElasticService {
     }
     
     public void saveAll(List<LogMessage> list) {
-        elasticRepository.saveAll(list);
+        logRepository.saveAll(list);
     }
 
 }
